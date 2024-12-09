@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ZŨN LEARN INFORMATION TECHNOLOGY</h1>
+
+        <!-- Form for uploading multiple images -->
+        <form id="upload-form">
+            <input type="file" id="image-upload" accept="image/*" multiple>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        <!-- Display the selected images -->
+        <h3>Selected Images:</h3>
+        <div id="images-container"></div>
+
+        <!-- Video Stream for Camera -->
+        <h2>Webcam Stream</h2>
+        <img src="{{ url_for('video_feed') }}" width="640" height="480" id="video-stream">
+
+        <!-- Area to display result -->
+        <div id="result"></div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
